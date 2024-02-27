@@ -1,0 +1,14 @@
+{%extends './base.html' %}
+
+
+   <!--TITUTLO  -->
+{% block title%}
+<h1>Pagina no encontrada</h1>
+{% endblock%}
+
+    <!--CUERPO  -->
+{% block body%}
+  <h1>Opss la pagina no existe </h1>
+  return render_template('404.html'),404
+
+{% endblock%}

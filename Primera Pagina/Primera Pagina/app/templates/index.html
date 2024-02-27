@@ -1,0 +1,33 @@
+{%extends './base.html' %}
+
+
+   <!--TITUTLO  -->
+{% block title%}
+
+{{data.titulo}}
+
+{% endblock%}
+
+    <!--CUERPO  -->
+{% block body%}
+<h1>Eduardo Jose Medina Santiago</h1>
+<h3>Ingeniero En Electronica</h3>
+
+<h4>{{data.Motor}}</h4>
+<h4>{{data.Bienvenida}}</h4>
+
+{% if data.cursos %}
+<ul>
+  {% for c in data.cursos %}
+  <li>{{ c }}</li>
+  {% endfor %}
+</ul>
+
+<p>Numero de cursos disponibles son {{ data.numero_cursos }}</p>
+{% else %}
+<p>No hay cursos disponibles</p>
+<!-- Con esto jinja define que el if llega a su fin importante hacerlo -->
+{% endif %}
+
+
+{% endblock%}
